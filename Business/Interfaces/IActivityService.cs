@@ -12,5 +12,6 @@ namespace Business.Interfaces
         void GenerateEmployeeActivitiesReport(int employeeId, DateTime startDate, DateTime endDate);
         void UpdateActivity(Activity activity);
         void GenerateTeamActivitiesReport(int teamId, DateTime startDate, DateTime endDate);
+        void DeleteActivity(int activityId);
     }
 }

@@ -55,5 +55,19 @@ namespace ChallengeDigitalH.Controllers
             _activityService.GenerateTeamActivitiesReport(teamId, startDate, endDate);
             return Ok();
         }
+
+        [HttpDelete("{activityId}")]
+        public IActionResult DeleteActivity(int activityId)
+        {
+            try
+            {
+                _activityService.DeleteActivity(activityId);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al eliminar la actividad: {ex.Message}");
+            }
+        }
     }
 }

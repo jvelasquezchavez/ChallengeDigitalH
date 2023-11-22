@@ -22,6 +22,11 @@ namespace Business.Services
             _activityRepository.AddActivity(activity);
         }
 
+        public void DeleteActivity(int activityId)
+        {
+            _activityRepository.DeleteActivity(activityId);
+        }
+
         public void GenerateEmployeeActivitiesReport(int employeeId, DateTime startDate, DateTime endDate)
         {
             var employee = _employeeRepository.GetEmployeeById(employeeId);
